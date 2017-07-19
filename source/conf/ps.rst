@@ -157,6 +157,11 @@ PS参数
 
     若为 ``true`` ，则生成的PS文件中会包含注释，用于解释文件中操作的逻辑，当你需要手动编辑PS文件时比较有用。默认情况下，其值为 ``false`` ，即PS文件中不会包含注释，此时生成的PS文件更小。
 
+.. _PS_CONVERT:
+
+**PS_CONVERT**
+    现代模式下调用 ``psconvert`` 命令时默认加上的参数，多个参数之间用逗号分隔 [``A,P``]
+
 .. _PS_IMAGE_COMPRESS:
 
 **PS_IMAGE_COMPRESS**

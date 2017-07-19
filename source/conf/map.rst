@@ -68,6 +68,11 @@ MAP参数
 **MAP_TITLE_OFFSET**
     图标题的底部与轴标注（或轴标签）的顶部之间的距离 [14p]
 
+.. _MAP_HEADING_OFFSET:
+
+**MAP_HEADING_OFFSET**
+    子图标题的顶部与图总标题的底部之间的距离 [20p]
+
 .. _MAP_SCALE_HEIGHT:
 
 **MAP_SCALE_HEIGHT**
