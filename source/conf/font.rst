@@ -28,7 +28,7 @@ FONT参数
 .. _FONT_HEADING:
 
 **FONT_HEADING**
-    多子图的总标题的字体 [``36p,Helvetica,black``]
+    多子图的总标题的字体 [``32p,Helvetica,black``]
 
 .. _FONT_LABEL:
 

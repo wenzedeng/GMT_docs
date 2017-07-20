@@ -71,7 +71,7 @@ MAP参数
 .. _MAP_HEADING_OFFSET:
 
 **MAP_HEADING_OFFSET**
-    子图标题的顶部与图总标题的底部之间的距离 [20p]
+    子图标题的顶部与图总标题的底部之间的距离 [18p]
 
 .. _MAP_SCALE_HEIGHT:
 
