@@ -106,4 +106,13 @@ GMT 对于地理投影和线性投影的默认设置有很大区别。有些时�
 
 既可以用浮点数表示也可以用指数表示，见 :doc:`/io/format` 一节。
 
+对于以弧度为单位的笛卡尔坐标而言，还可以使用 ``[+|-][n]pi[m]`` 指定数据范围为
+:math:`\pi` 的整数倍或分数倍。其中 n 取整数表示 :math:`\pi` 的 n 倍，m可以取2、
+3、4表示 :math:`\pi` 的1/2、1/3、1/4。
+
+例如：
+
+- ``-R-2pi/2pi/0/1`` 表示X轴范围是 :math:`-2\pi` 到 :math:`2\pi`
+- ``-R-pi4/pi4/0/1`` 表示X轴范围是 :math:`-\pi/4` 到 :math:`\pi/4`
+
 .. source: http://gmt.soest.hawaii.edu/doc/latest/GMT_Docs.html#data-domain-or-map-region-the-r-option
