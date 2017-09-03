@@ -194,4 +194,26 @@ GMT用单个字母指定投影方式，但英文字母只有26个，而投影方
    | *exp*\ \|\ **T**\ \|\ **t**]][**d**]                       | Linear, log\ :math:`_{10}`, :math:`x^a-y^b`, and time |
    +------------------------------------------------------------+-------------------------------------------------------+
 
+从GMT6开始，GMT支持使用 PROJ.4 库来实现坐标和基准面的转换。这一特性是通过GDAL
+实现的，因而需要GMT在安装时链接到GDAL库。详细的 PROJ.4 语法见
+`<http://proj4.org/apps/index.html>`_ 。
+
+在PROJ.4中，投影一般有很多参数，多个参数之间用空格分隔。在GMT中，可以将所有参数
+用双引号括起来或直接将所有参数连在一起，例如：
+``-J"+proj=merc +ellps=WGS84 +units=m"`` 和 ``-J+proj=merc+ellps=WGS84+units=m`` 。
+
+也可以直接使用 `EPSG codes <http://spatialreference.org>`_ ，但需要设置环境变量
+GDAL_DATA 指向 GDAL 的 data 子目录。例如 ``-JEPSG:4326`` 表示使用 WGS-84 系统。
+
+对于 ``mapproject`` 和 ``grdproject`` 模块，可以直接使用 ``+to`` 关键字直接指定
+要将A参考系统转换为B参考系统，而不需要中间步骤。例如，
+``-JEPSG:4326+to+proj=aeqd+ellps=WGS84+units=m`` 。
+
+While for point and grid conversions done by *mapproject* and *grdproject* we can use `all PROJ.4 projections <http://proj4.org/projections/index.html>`_, the situations is, however, rather more limited for mapping purposes.
+Here, only the subset of the *PROJ.4* projections that can be mapped into the GMT projections syntax is
+available to use. Another aspect that is not present in *PROJ.4*, because it's not a mapping library,
+is how to set the map scale or map dimension. We introduced the two extensions **+width=**\ *size* and
+**+scale=**\ *1:xxxx* that work exactly like the *map width* and *scale* in classical GMT. It is also allowed
+to provide the scale (but NOT the width) by appending the string "/1:xxx" to the end of the projection parameters.
+
 .. source: http://gmt.soest.hawaii.edu/doc/latest/GMT_Docs.html#coordinate-transformations-and-map-projections-the-j-option
