@@ -1,10 +1,9 @@
-GMT Python API
-==============
+GMT/Python
+==========
 
-GMT 的 Python 接口正在开发中，项目地址: https://github.com/GenericMappingTools/gmt-python
+从GMT 6.0 开始，GMT提供了Python接口，用户可以在Python中直接调用GMT绘图。
 
-安装
-----
+GMT/Python 目前正在开发中。
 
-1. Python版本要大于3.5
-2. 安装GMT的开发版本，即GMT源码中的trunk版本
+- 项目地址: https://github.com/GenericMappingTools/gmt-python
+- 官方文档: https://genericmappingtools.github.io/gmt-python/
