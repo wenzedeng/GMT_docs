@@ -95,9 +95,16 @@ X轴、Y轴、Z轴，每条轴都有很多属性，包括刻度间隔、网格�
 - ``+l<label>`` 用于给指定的轴加标签。默认情况下，X轴标签文字方向平行于X轴，
   Y轴标签文字方向平行于Y轴。若Y轴标签文字很短，则Y轴可以使用 ``+L<label>``
   选项，使得Y轴标签文字方向平行于X轴
+- ``+l<label1>||<label2>`` 选项可以用于为左右轴或上下轴添加不同的标签，两个标签
+  之间用 ``||`` 分隔，其中 ``<label1>`` 指定了左轴或下轴的标签， ``<label2>``
+  指定了右轴和上轴的标签
 - ``+p<prefix>`` 选中的轴的标注加前缀
 - ``+u<unit>`` 给选中的轴的标注加单位。对于地图而言，标注的单位为度，该符号是
   自动添加的，由 :ref:`FORMAT_GEO_MAP <FORMAT_GEO_MAP>` 控制
+
+示例::
+
+    gmt psbasemap -R0/50/0/7 -JX6i/8i -Xc -P -Bxaf+L"Bottom label||Top label" -Byaf+l"Left label||Right label" > dual_labels.ps
 
 ``p|s``
 ~~~~~~~
