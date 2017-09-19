@@ -6,7 +6,12 @@
 .. _GMT_AUTO_DOWNLOAD:
 
 **GMT_AUTO_DOWNLOAD**
-    是否自动从GMT服务器下载文件到缓存目录 [on]
+    是否允许GMT自动从GMT服务器（由 ``GMT_DATA_URL`` 控制）下载数据文件到缓存目录 [on]
+
+.. _GMT_DATA_URL:
+
+**GMT_DATA_URL**
+    GMT数据服务器地址，默认使用SOEST官方镜像。
 
 .. _GMT_COMPATIBILITY:
 
