@@ -237,15 +237,6 @@ subplot
 
 退出子图模式，并经绘图起点回到子图开始之前的位置。
 
-revert
-++++++
-
-::
-
-    gmt revert [<n>|all] [-V<verbose>]
-
-该命令会擦除当前图片的最近 n 个图层， ``all`` 表示擦除整个图片的所有内容。
-
 end
 +++
 
@@ -254,3 +245,10 @@ end
     gmt end [-V<verbose>]
 
 该命令用于结束现代模式，完成所有相关图片的绘制工作，并将图片置于当前目录。
+
+clear
++++++
+
+清理临时文件::
+
+    gmt clear [all|cache|conf|cpt|history]
